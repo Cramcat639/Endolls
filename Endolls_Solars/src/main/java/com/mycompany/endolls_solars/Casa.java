@@ -29,7 +29,7 @@ public class Casa {
     public void infoCasa (){
         System.out.println("Client: "+nif+"-"+nom);
         System.out.println("Plaques solars instal·lades: "+ placalist.size());
-        System.out.println("Potència total: "+ +"W");
+        System.out.println("Potència total: "+ totalPotencia() +"W");
         System.out.println("Inverció total: "+ +"€");
         System.out.println("Aparells registrats: "+);
         System.out.println("Consum actual: "+);
@@ -48,6 +48,20 @@ public class Casa {
     }
     public ArrayList<Aparell> donamAparell(){
     return this.aparelllist;
+    }
+    public Integer totalPotencia(){
+        Integer totalPotenciaPlaca=0;
+        for (int j=0; j<placalist.size();j++){
+            totalPotenciaPlaca = totalPotenciaPlaca + placalist.get(j).donamPotenciaPlaca();
+        }
+        return totalPotenciaPlaca;
+    }
+    public Float totalPreu(){
+        Float totalPreuPlaca=0;!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        for (float j=0; j<placalist.size();j++){
+            totalPreuPlaca = totalPreuPlaca + placalist.get(j).donamPreu();
+        }
+        return totalPreuPlaca;
     }
     public void funcioOffAparell(String descripcio){
         for (int i=0; i<aparelllist.size();i++){

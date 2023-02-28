@@ -16,4 +16,7 @@ public class PlacaSolar {
     public Integer donamPotenciaPlaca(){
         return this.potencia;
     }
+    public Float donamPreu(){
+        return this.preu;
+    }
 }

@@ -25,7 +25,5 @@ public class Aparell {
     }
     public void offAparell(){
         this.interruptor=false;
-    }
-
-    
+    }  
 }
